@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
 
-@Repository()
+@Repository
 public interface BookRepository extends Neo4jRepository<Book, Long> {
 
     Book findByTitle(@Param("title") String title);
