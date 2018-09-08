@@ -7,7 +7,7 @@ import org.neo4j.ogm.annotation.EndNode;
 import org.neo4j.ogm.annotation.RelationshipEntity;
 import org.neo4j.ogm.annotation.StartNode;
 
-@RelationshipEntity(type = "AUTHORED")
+@RelationshipEntity(type = "AUTHOR")
 public class Author extends BaseRelationship {
 
     @Getter

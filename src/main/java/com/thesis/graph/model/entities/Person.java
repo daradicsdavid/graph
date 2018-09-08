@@ -14,6 +14,6 @@ public class Person extends BaseEntity {
     @Setter
     private String name;
 
-    @Relationship(type = "AUTHORED")
+    @Relationship(type = "AUTHOR")
     private List<Book> books = new ArrayList<>();
 }

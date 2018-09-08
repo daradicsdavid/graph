@@ -15,6 +15,6 @@ public interface BookRepository extends Neo4jRepository<Book, Long> {
 
     Collection<Book> findByTitleLike(@Param("title") String title);
 
-    @Query("MATCH (b:Book)<-[a:AUTHORED]-(p:Person) RETURN b,a,p LIMIT {limit}")
+    @Query("MATCH (b:Book)<-[a:AUTHOR]-(p:Person) RETURN b,a,p LIMIT {limit}")
     Collection<Book> graph(@Param("limit") int limit);
 }

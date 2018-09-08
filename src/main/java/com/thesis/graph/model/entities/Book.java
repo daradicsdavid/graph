@@ -16,7 +16,23 @@ public class Book extends BaseEntity {
     private String title;
 
     @Getter
-    @Relationship(type = "AUTHORED", direction = Relationship.INCOMING)
+    @Setter
+    private String pageNumber;
+
+    @Getter
+    @Setter
+    private String isbn;
+
+    @Getter
+    @Setter
+    private String language;
+
+    @Getter
+    @Setter
+    private Integer releaseYear;
+
+    @Getter
+    @Relationship(type = "AUTHOR", direction = Relationship.INCOMING)
     private List<Author> authors;
 
     public void addAuthor(Author author) {
@@ -25,4 +41,7 @@ public class Book extends BaseEntity {
         }
         this.authors.add(author);
     }
+
+    @Relationship(type = "PUBLISH")
+    private Publisher publisher;
 }
