@@ -1,6 +1,8 @@
 package com.thesis.graph.model.entities;
 
 
+import com.thesis.graph.model.entities.base.Authored;
+import com.thesis.graph.model.entities.base.BaseEntity;
 import lombok.Getter;
 import lombok.Setter;
 import org.neo4j.ogm.annotation.Relationship;
@@ -15,7 +17,7 @@ public class Person extends BaseEntity {
     private String name;
 
     @Relationship(type = "AUTHOR")
-    private List<Book> books = new ArrayList<>();
+    private List<Authored> authored = new ArrayList<>();
 
     @Relationship(type = "EDITOR")
     private List<Proceeding> proceedings = new ArrayList<>();

@@ -1,6 +1,6 @@
 package com.thesis.graph.model.relationships;
 
-import com.thesis.graph.model.entities.Book;
+import com.thesis.graph.model.entities.base.Authored;
 import com.thesis.graph.model.entities.Person;
 import lombok.Getter;
 import org.neo4j.ogm.annotation.EndNode;
@@ -16,13 +16,13 @@ public class Author extends BaseRelationship {
 
     @Getter
     @EndNode
-    private Book book;
+    private Authored authored;
 
     public Author() {
     }
 
-    public Author(Book book, Person person) {
-        this.book = book;
+    public Author(Authored authored, Person person) {
+        this.authored = authored;
         this.person = person;
     }
 }

@@ -1,5 +1,6 @@
 package com.thesis.graph.model.entities;
 
+import com.thesis.graph.model.entities.base.BaseEntity;
 import com.thesis.graph.model.relationships.Editor;
 import lombok.Getter;
 import lombok.Setter;

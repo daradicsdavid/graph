@@ -1,6 +1,6 @@
 package com.thesis.graph.model.entities;
 
-import com.thesis.graph.model.relationships.Author;
+import com.thesis.graph.model.entities.base.BaseEntity;
 import com.thesis.graph.model.relationships.Publish;
 import lombok.Getter;
 import lombok.Setter;
